@@ -11,6 +11,13 @@
 -  mariaDB, mySql WorkBench 설치 및 샘플 DB 구축
 -  스프링, Mariadb, MyBatis 연동, 데이터 조회
 
+</br>
+
+-  개발 환경 세팅 완료 후 스크린샷
+
+![image](https://user-images.githubusercontent.com/71515740/200478547-074880b4-acb1-4560-aa7a-6185013faea4.png)
+
+
 ### 2. API 문서 작성
 V 1.0
 
