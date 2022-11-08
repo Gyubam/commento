@@ -16,6 +16,7 @@
 -  개발 환경 세팅 완료 후 스크린샷
 
 ![image](https://user-images.githubusercontent.com/71515740/200478547-074880b4-acb1-4560-aa7a-6185013faea4.png)
+![image](https://user-images.githubusercontent.com/71515740/200478911-320a5218-52ef-476c-a5e8-378c950d81b6.png)
 
 
 ### 2. API 문서 작성
