@@ -25,3 +25,7 @@ V 1.0
 - 게시글 작성 수 API 작성
   + 총 게시글 작성 수
   + 사용자별 게시글 작성 수
+
+http 통신에 대한 정리 - https://velog.io/@sgb8170/HTTP%EB%9E%80
+</br> </br>
+url을 통한 요청 및 응답 까지의 과정 정리 - https://velog.io/@sgb8170/%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EC%84%9C%EB%B2%84%EA%B0%84-%ED%86%B5%EC%8B%A0-%EA%B3%BC%EC%A0%95-%EB%B0%8F-%EA%B5%AC%EC%A1%B0
