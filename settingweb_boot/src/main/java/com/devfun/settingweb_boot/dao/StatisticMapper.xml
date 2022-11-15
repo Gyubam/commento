@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.devfun.settingweb_boot.dao.StatisticMapper">
+ 
+    <select id="selectYearLogin" parameterType="string" resultType="hashMap">
+        select count(*) as totCnt
+        from statistic.requestinfo ri
+        where left(ri.createDate, 2) = #{year} and requestCode = "L";
+    </select>
+    
+    <select id="selectMonthLogin" parameterType="string" resultType="hashMap">
+        select count(*) as totCnt
+        from statistic.requestinfo ri
+        where substring(ri.createDate, 3, 2) = #{month} and requestCode = "L";
+    </select>
+    
+    <select id="selectDateLogin" parameterType="string" resultType="hashMap">
+        select count(*) as totCnt
+        from statistic.requestinfo ri
+        where left(ri.createDate, 6) = #{Date} and requestCode = "L";
+    </select>
+    
+    <select id="selectDateAvgLogin" parameterType="string" resultType="hashMap">
+        select avg(averageCnt) as average
+        from (select count(*) as averageCnt
+        	from statistic.requestinfo ri
+        	where requestCode = "L"
+        	group by ri.createDate) A;
+    </select>
+    
+    <select id="selectAllDateLogin" parameterType="string" resultType="String">
+        select ri.createDateOnly
+        from statistic.requestinfo ri
+        where requestCode = "L"
+        group by ri.createDateOnly;
+    </select>
+    
+    <select id="selectmonthLoginWithDept" parameterType="string" resultType="hashMap">
+		select count(*) as totCnt
+		from (select requestID, requestCode, createDate, HR_ORGAN, USERNAME
+			from requestInfo, user
+			where requestInfo.userId = user.userId) A
+		where HR_ORGAN = #{dept} and substring(createDate, 3, 2) = #{month} and requestCode = "L";
+    </select>
+    
+    
+    
+</mapper>
